@@ -10,12 +10,26 @@ A Discord bot that provides advanced spawn control for the Auto Bases Ascended p
 - Supports map caps, cooldowns, and weighted spawn groups
 - Includes a live dashboard and admin commands
 - Uses lightweight JSON files instead of a database
+- Supports optional Lethal Tribe Logs raid tracking
+- Tracks attacking tribes, tribe IDs, destroyers, and destroyed structures
+- Supports one combined Tribe Logs feed across multiple maps/servers
+- Maintains a configurable rolling raid history in `raid_history.log`
 
 ## Configuration
 
-AutoBasesController uses a `config.json` file for Discord channels, RCON servers, scheduler settings, maps, cooldowns, and spawn groups.
+AutoBasesController uses a `config.json` file for:
 
-A full template and annotated example are included in the release download.
+- Discord channels
+- RCON servers
+- scheduler settings
+- maps
+- cooldowns
+- spawn groups
+- cluster-wide limits
+- in-game announcements
+- optional Lethal Tribe Logs raid tracking
+
+A full template, annotated config example, and detailed README are included in the release download.
 
 Minimal map example:
 
