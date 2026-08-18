@@ -10,10 +10,23 @@ A Discord bot that provides advanced spawn control for the Auto Bases Ascended p
 - Supports map caps, cooldowns, and weighted spawn groups
 - Includes a live dashboard and admin commands
 - Uses lightweight JSON files instead of a database
-- Supports optional Lethal Tribe Logs raid tracking
+- Supports optional TribeLogsAscended raid tracking
 - Tracks attacking tribes, tribe IDs, destroyers, and destroyed structures
-- Supports one combined Tribe Logs feed across multiple maps/servers
+- Supports one combined TribeLogsAscended feed across multiple maps/servers
+- Can post completed raid reports to a dedicated Discord channel
+- Uses a configurable completion grace period to catch late destruction log messages
 - Maintains a configurable rolling raid history in `raid_history.log`
+
+## Raid Tracking Requirements
+
+Raid tracking is optional and requires the TribeLogsAscended plugin.
+
+AutoBases templates used with raid tracking must have:
+
+- `TribeIdOverride = -1`
+- or `TribeIdOverride > 50000`
+
+The bot must also be able to read the configured TribeLogsAscended Discord channel.
 
 ## Configuration
 
@@ -27,7 +40,9 @@ AutoBasesController uses a `config.json` file for:
 - spawn groups
 - cluster-wide limits
 - in-game announcements
-- optional Lethal Tribe Logs raid tracking
+- optional TribeLogsAscended raid tracking
+- optional completed raid report channel
+- raid completion grace period
 
 A full template, annotated config example, and detailed README are included in the release download.
 
